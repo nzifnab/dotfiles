@@ -1,0 +1,19 @@
+[user]
+	name = Nathan Benes
+	email = nathan.benes@gmail.com
+[core]
+	editor = vim
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExistCode = false
+[mergetool]
+	keepBackup = false
+[diff "diffmerge"]
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
+[diff]
+	tool = diffmerge
+[difftool]
+	prompt = false
+[alias]
+	undeployed = log --pretty=format:\"%h %an: %s\" --abbrev-commit  heroku-pro/master..pro

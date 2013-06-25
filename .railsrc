@@ -1,0 +1,24 @@
+def toggle_sql(default = nil)
+  if default == false || default.nil?
+    set_logger nil and return false
+  else
+    set_logger std_out_logger and return true
+  end
+end
+
+def std_out_logger
+  if !defined?(Rails) # Rails 2
+    require 'logger'
+  end
+  Logger.new(STDOUT)
+end
+
+def set_logger(logger)
+  if defined?(Rails) # Rails 3
+		ActiveRecord::Base.logger = logger
+    ActiveRecord::Base.clear_active_connections!
+  else
+    Object.const_set('RAILS_DEFAULT_LOGGER', logger)
+  end
+end
+toggle_sql(true)
