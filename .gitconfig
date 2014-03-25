@@ -16,4 +16,6 @@
 [difftool]
 	prompt = false
 [alias]
-	undeployed = log --pretty=format:\"%h %an: %s\" --abbrev-commit  heroku-pro/master..pro
+	undeployed = log --pretty=format:\"%h %an: %s\" --abbrev-commit  production/master..master
+[heroku]
+	account = work
