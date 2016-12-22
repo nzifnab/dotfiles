@@ -29,6 +29,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/git/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin"
+export PATH="/usr/local/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 export PGDATA="/usr/local/pgsql/data"
@@ -149,3 +150,6 @@ export MY_BUNDLE_ENV="dev"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/nbenes/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
