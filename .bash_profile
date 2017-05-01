@@ -15,13 +15,14 @@
 # ~/.bash_profile: executed by bash for login shells.
 
 # source the system wide bashrc if it exists
+
 if [ -e /etc/bash.bashrc ] ; then
   source /etc/bash.bashrc
 fi
 
 # source the users bashrc if it exists
-if [ -e "${HOME}/.bashrc" ] ; then
-  source "${HOME}/.bashrc"
+if [ -e "${HOME}/bin/dotfiles/.bashrc" ] ; then
+  source "${HOME}/bin/dotfiles/.bashrc"
 fi
 
 # Set PATH so it includes user's private bin if it exists
@@ -75,3 +76,4 @@ fi
 [[ -s /home/nbenes/.nvm/nvm.sh ]] && . /home/nbenes/.nvm/nvm.sh # This loads NVM
 
 # eval "$(/home/nbenes/projects/scripts/bin/law init -)"
+export PATH="$HOME/.linuxbrew/bin:$PATH"
